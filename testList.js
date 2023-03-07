@@ -60,14 +60,17 @@ assert.strictEqual(list.findLast(1), 1);
 
 // Test for the clear method
 list.clear();
-assert.deepStrictEqual(list.array, []);
+assert.strictEqual(list.length(), 0);
 
 // Test for the extend method
 const list2 = new singlyLinkedList();
 list.append(0); // [0]
 list2.append(1);
 list2.append(2); // [1, 2]
-const extendedList = list.extend(list2);
-assert.deepStrictEqual(extendedList, [0, 1, 2]);
+list.extend(list2);
+assert.strictEqual(list.length(), 3);
+assert.strictEqual(list.get(0), 0);
+assert.strictEqual(list.get(1), 1);
+assert.strictEqual(list.get(2), 2);
 
 

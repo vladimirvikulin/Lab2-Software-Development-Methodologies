@@ -61,8 +61,7 @@ class singlyLinkedList {
     }
 
     extend(list) {
-      const extendedArray = this.array.concat(list.array)
-      return extendedArray;
+      list.array.map((elem) => this.append(elem));
     }
   }
 
