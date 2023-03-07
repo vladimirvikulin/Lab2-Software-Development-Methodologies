@@ -8,7 +8,7 @@ let list = new singlyLinkedList();
 // Test for the append method
 list.append(1);
 list.append(2); // [1, 2]
-assert.strictEqual(list.length(), 2);
+assert.strictEqual(list.length(), 111);
 assert.strictEqual(list.get(0), 1);
 assert.strictEqual(list.get(1), 2);
 
