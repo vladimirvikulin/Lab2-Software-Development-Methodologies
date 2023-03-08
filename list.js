@@ -1,6 +1,6 @@
 'use strict'
 
-class singlyLinkedList {
+class List {
     constructor() {
       this.array = [];
     }
@@ -10,36 +10,45 @@ class singlyLinkedList {
     }
   
     append(item) {
+      if (typeof item !== 'string') {
+        throw new Error('Invalid typeof element');
+      }
       this.array.push(item);
     }
   
     insert(item, index) {
-      if (index < 0 || index > this.length) {
-        throw new Error("Invalid index");
+      if (typeof item !== 'string') {
+        throw new Error('Invalid typeof element');
+      }
+      if (index < 0 || index > this.length()) {
+        throw new Error('Invalid index');
       }
       this.array.splice(index, 0, item);
     }
   
     delete(index) {
-      if (index < 0 || index >= this.length) {
-        throw new Error("Invalid index");
+      if (index < 0 || index >= this.length()) {
+        throw new Error('Invalid index');
       }
       return this.array.splice(index, 1);
     }
   
     deleteAll(item) {
+      if (typeof item !== 'string') {
+        throw new Error('Invalid typeof element');
+      }
       this.array = this.array.filter((element) => element !== item);
     }
   
     get(index) {
-      if (index < 0 || index >= this.length) {
-        throw new Error("Invalid index");
+      if (index < 0 || index >= this.length()) {
+        throw new Error('Invalid index');
       }
       return this.array[index];
     }
   
     clone() {
-      const newList = new singlyLinkedList();
+      const newList = new List();
       newList.array = [...this.array];
       return newList;
     }
@@ -65,5 +74,5 @@ class singlyLinkedList {
     }
   }
 
-  module.exports = { singlyLinkedList };
+  module.exports = { List };
 

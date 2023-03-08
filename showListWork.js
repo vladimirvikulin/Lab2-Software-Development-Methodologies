@@ -1,8 +1,8 @@
 'use strict'
 
-const { singlyLinkedList } = require('./list.js')
+const { List } = require('./list.js')
 
-const list = new singlyLinkedList();
+const list = new List();
 console.log(list);
 console.log('length():', list.length() + '\n');
 
@@ -53,9 +53,10 @@ list.clear()
 console.log('clear()');
 console.log(list, '\n');
 
-const list2 = new singlyLinkedList();
+const list2 = new List();
 list.append(1);
 list2.append(2);
 console.log(list);
 console.log(list2);
-console.log('extend():', list.extend(list2));
+list.extend(list2)
+console.log('extend():', list);
