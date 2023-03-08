@@ -3,60 +3,67 @@
 const { List } = require('./list.js')
 
 const list = new List();
-console.log(list);
-console.log('length():', list.length() + '\n');
 
-console.log(list);
+list.show();
+console.log('length():', list.length());
+
+list.show();
 list.append(5)
 console.log('append(5)');
-console.log(list, '\n');
+list.show();
 
-console.log(list);
+list.show();
 list.insert('sad', 1);
 console.log('insert(\'sad\', 1)');
-console.log(list, '\n');
+list.show();
 
-console.log(list);
+list.show();
 list.delete(1);
 console.log('delete(1)');
-console.log(list, '\n');
+list.show();
+
+list.append(5);
+list.append(5);
+list.append('sad');
+list.show();
+list.deleteAll(5)
+console.log('deleteAll(5)');
+list.show();
+
+list.show();
+console.log('get(0):', list.get(0));
 
 list.append('sad');
-console.log(list);
-list.deleteAll('sad')
-console.log('deleteAll(\'sad\')');
-console.log(list, '\n');
-
-console.log(list);
-console.log('get(0):', list.get(0) + '\n');
-
-list.append('sad');
-console.log(list);
+list.show();
 const cloneList = list.clone();
-console.log('clone():', cloneList.array + '\n');
+console.log('clone():');
+cloneList.show();
 
+list.append(true);
 list.append(345);
 list.append(true);
-console.log(list);
+list.show();
 list.reverse();
-console.log('reverse():', list.array  + '\n');
+console.log('reverse():');
+list.show();
 
-list.append(true);
-console.log(list);
-console.log('findFirst(true):', list.findFirst(true) + '\n');
 
-console.log(list);
-console.log('findLast(true):', list.findLast(true) + '\n');
+list.show();
+console.log('findFirst(true):', list.findFirst(true));
 
-console.log(list);
+list.show();
+console.log('findLast(true):', list.findLast(true));
+
+list.show();
 list.clear()
 console.log('clear()');
-console.log(list, '\n');
+list.show();
 
 const list2 = new List();
 list.append(1);
 list2.append(2);
-console.log(list);
-console.log(list2);
-list.extend(list2)
-console.log('extend():', list);
+list.show();
+list2.show();
+list.extend(list2);
+console.log('extend():');
+list.show();
