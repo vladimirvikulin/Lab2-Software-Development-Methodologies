@@ -6,9 +6,11 @@ The application implements a typed linked list that stores a collection of eleme
 
 ## Variant
 
-The variant is determined by taking the remainder of the student ID number divided by 4:
-My ID number — 1106
-1106 % 4 = 2
+The variant is determined by taking the remainder of the student ID number divided by 4  
+My ID number — 1106  
+1106 % 4 = 2  
+Initial list implementation: list based on built-in arrays/lists  
+A second implementation: singly linked circular list   
 
 ## How to run
 
